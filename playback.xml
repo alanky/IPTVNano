@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="IPTVNano_webOS_Test" generator-info-url="https://github.com/alanky/IPTVNano">
+    
+    <!-- Channel 1: Big Buck Bunny -->
+    <channel id="test.bunny">
+        <display-name lang="en">Open Source Movie: Big Buck Bunny (HLS)</display-name>
+    </channel>
+    
+    <!-- Channel 2: AWS Official Stream -->
+    <channel id="test.bipbop">
+        <display-name lang="en">AWS Official Adaptive Test Stream (HLS)</display-name>
+    </channel>
+
+    <!-- Channel 3: DASH Official Stream -->
+    <channel id="test.dash">
+        <display-name lang="en">Akamai Dynamic Adaptive Test Stream (DASH)</display-name>
+    </channel>
+
+    <!-- EPG Timeline Configuration: All-day rolling test playback for the current date (September 20, 2026) -->
+    <!-- start and stop format strictly follows: YYYYMMDDHHMMSS +timezone -->
+    <programme channel="test.bunny" start="20260920000000 +0800" stop="20260920120000 +0800">
+        <title lang="en">Open Source Media Test Movie - Big Buck Bunny</title>
+        <desc lang="en">Used to verify LG webOS player's HLS hardware decoding, A/V synchronization, and full-screen smoothness.</desc>
+    </programme>
+    
+    <programme channel="test.bunny" start="20260920120000 +0800" stop="20260920235959 +0800">
+        <title lang="en">Open Source Media Test Movie - Big Buck Bunny (Loop Session)</title>
+        <desc lang="en">Used to verify client memory recycling and high-load stability during long-term continuous playback.</desc>
+    </programme>
+
+    <programme channel="test.bipbop" start="20260920000000 +0800" stop="20260920235959 +0800">
+        <title lang="en">AWS BipBop Multi-bitrate Adaptive Technology Test</title>
+        <desc lang="en">Used to test the player's ability to automatically downgrade/upgrade definition (ABR) during network bandwidth fluctuations.</desc>
+    </programme>
+
+</tv>
